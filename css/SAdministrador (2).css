@@ -1,0 +1,51 @@
+* {
+  padding: 0;
+    margin: 0;
+  }
+
+body{
+  background: #fffffa;
+}
+
+
+header {
+  width: 100%;
+   overflow: hidden;
+   background:#ffc107;
+    margin-bottom: 50px;
+  }
+
+.wrapper{
+  width: 100%;
+   margin: auto;
+   overflow: hidden;
+ }
+
+header nav{
+   float:inherit;
+
+ }
+
+header nav a{
+  display: inline-block;
+  text-decoration: none;
+   color: #fff;
+
+    padding: 5px 60px;
+      font-size: 20px;
+       font-weight: bold;
+     }
+
+header nav a:hover{
+    text-decoration: none;
+  background:#007bff;
+   border-radius: 50px;
+color: #fff;
+ }
+
+ #brn{
+   float: right;
+   padding:  5px 60px;
+   margin: 20px;
+
+ }

@@ -1,0 +1,22 @@
+table{
+background-color: white;
+text-align: left;
+border-collapse: collapse;
+width: 100%;
+}
+
+th, td{
+border: solid 1px black;
+
+}
+thead{
+background-color:#ffc107;
+border-bottom: solid 5px #343a40;
+color: white;
+
+}
+
+#contenedor{
+
+
+}
