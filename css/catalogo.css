@@ -121,3 +121,7 @@ body{
   text-decoration: none;
   color: #000000;
 }
+
+.products-list .product-item .imga{
+  height: 350px;
+}

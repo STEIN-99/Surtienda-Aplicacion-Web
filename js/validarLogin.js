@@ -30,7 +30,7 @@ function enviarform(){
     const xhr = new XMLHttpRequest();
     xhr.open('POST', '../funciones/ValidarSesion.php', true);
     var formData = new FormData(form);
-    var eliminar = confirm("Bienvenido, pulse aceptar para continuar")
+    var eliminar = confirm("Pulse aceptar para continuar")
     if ( eliminar ) {
     xhr.addEventListener('load', e =>{
         if (e.target.readyState == 4 && e.target.status == 200) {

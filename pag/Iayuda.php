@@ -15,12 +15,12 @@
 
 		<div class="store-wrapper">
 			<div class="category_list">
-				<a  class="category_item"  onclick="mostrarConsulta();">Consulta de prodcutos</a>
-				<a  class="category_item"  onclick="mostrarServicios();">Servicios</a>
-				<a  class="category_item"  onclick="mostrarQuienes();">¿Quienes somos?</a>
-				<a  class="category_item"  onclick="mostrarConsultas();">Consultas de pedidos</a>
-				<a  class="category_item"  onclick="mostrarcancelar();">¿Se puede cancelar pedidos en caja?</a>
-				<a  class="category_item"  onclick="mostrarGarantias();">Garantias de productos</a>
+				<a  class="category_item"  onmouseover="mostrarConsulta();">Consulta de prodcutos</a>
+				<a  class="category_item"  onmouseover="mostrarServicios();">Servicios</a>
+				<a  class="category_item"  onmouseover="mostrarQuienes();">¿Quienes somos?</a>
+				<a  class="category_item"  onmouseover="mostrarConsultas();">Consultas de pedidos</a>
+				<a  class="category_item"  onmouseover="mostrarcancelar();">¿Se puede cancelar pedidos en caja?</a>
+				<a  class="category_item"  onmouseover="mostrarGarantias();">Garantias de productos</a>
 			</div>
 			<section class="products-list">
 

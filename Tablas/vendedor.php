@@ -16,7 +16,6 @@ include '../funciones/BaseDatos.php';
         <th scope="col">Direccion</th>
         <th scope="col">Fecha de nacimiento</th>
         
-        <th scope="col">Editar</th>
         <th scope="col">Eliminar</th>
         
       </tr>
@@ -38,16 +37,14 @@ include '../funciones/BaseDatos.php';
   <td> <?php echo $varia1[7]?> </td>
 
 
-  <td class="text-center">
-  <button class="btnazul" onclick="eliminarvendedor(<?php echo $varia1['ID_VENDEDOR']?>)">Editar</button>
-  </td>
+
   <td class="text-center">
   <button class="btnrojo" onclick="eliminarvendedor(<?php echo $varia1['ID_VENDEDOR']?>)">Eliminar</button>
   </td>
       </tr>
   <?php } ?>
   <td class="text-center">
-  <button href="../Funciones/FAProducto.php?ID=<?php echo $varia1[6]?>">Agregar</button>
+  <button onclick="modalVendedores();">Agregar</button>
   </td>
     </tbody>
   </table>

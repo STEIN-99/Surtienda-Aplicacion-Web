@@ -23,6 +23,7 @@ header("Location:  ../formularios/Login.html");
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <!-- //Solo para iconos-->
     <link rel="stylesheet" href="../css/catalogo.css">
+    <link rel="stylesheet" href="../css/Ayuda.css">
     <link rel="stylesheet" href="../css/Inicio.css">
     <title>Surtienda</title>
 </head>
@@ -38,9 +39,9 @@ header("Location:  ../formularios/Login.html");
     </div>
 
     <ul class="navbar">
-                <li><a class="activo" href="SucursalesUsua.php">Sucursales</a></li>
-                <li><a class="activo" href="ayudaUsua.php">Ayuda</a></li>
-                <li><a class="activo" href="#"><?php echo "".$_SESSION['usua']; ?></a></li>
+                <li><button onclick="mostrarSucursalesUsu()">Sucursales</button></li>
+                <li><button onclick="mostrarAyudaUsu()">Ayuda</button></li>
+                <li><a class="activo" ><?php echo "".$_SESSION['usua']; ?></a></li>
             </ul>
             
     <div class="navbarh">
@@ -58,12 +59,6 @@ header("Location:  ../formularios/Login.html");
             </ul>
 </nav>
 
-<!--
-<form action="funciones/busqueda1.php" method="get" class="form_busqueda">
-    <input type="text" name="busqueda" id="busqueda" class="" placeholder="Entra todo lo que necesites">
-    <input type="submit" value="buscar" class="btn_buscar">
-</form>
--->
 
 <!-- Banner -->
 <div class="banner-contenedor">
@@ -71,6 +66,9 @@ header("Location:  ../formularios/Login.html");
             <img src="../img/Slider/slider2.jpg" alt="">
         </div>
 </div>
+
+
+<div id="contenidoUsua" class="contenidoUsua">
 
 
 <!-- Categoria de productos -->
@@ -84,7 +82,7 @@ header("Location:  ../formularios/Login.html");
     ?>
 
     <div class="category_list">
-    <a href="SeleccionProductosUsua.php?ID=<?php echo $varia1[0]?>" class="category_item" ><?php echo $varia1[1]?></a>
+    <a onclick="mostrarProductosUsu(<?php echo $varia1['ID_MARCAS']?>)" class="category_item" ><?php echo $varia1[1]?></a>
     </div>
     <?php } ?>
 </div>
@@ -111,6 +109,7 @@ header("Location:  ../formularios/Login.html");
         </section>
 </div>
 <!-- Finaliza listado de productos -->
+</div>
 
 <!-- Pie de pagina -->
 <footer class="footer">
@@ -134,13 +133,13 @@ header("Location:  ../formularios/Login.html");
                     <a href="Usuario.php">Inicio</a>
                         <br>
                         <br>
-                        <a href="SucursalesUsua.php">Sucursales</a>
+                        <a  onclick=" mostrarSucursalesUsu()">Sucursales</a>
                         <br>
                         <br>
                         <a href="Usuario.php">Productos</a>
                         <br>
                         <br>
-                        <a href="ayudaUsua.php">Ayuda</a>
+                        <a  onclick="mostrarAyudaUsu()">Ayuda</a>
                         <br>
                         <br>
                         <a href="Usuario.php">Usuario</a>
@@ -201,6 +200,8 @@ header("Location:  ../formularios/Login.html");
 
 
 <script src="../js/validarcontactanos.js"></script>
+<script src="../js/ContenidoUsuario.js"></script>
+<script src="../js/ayuda.js"></script>
 <script src="../js/inicio.js"></script>
 
 </body>

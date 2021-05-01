@@ -14,7 +14,7 @@ include '../funciones/BaseDatos.php';
         <th scope="col">Img</th>
         <th scope="col">Precio</th>
         
-        <th scope="col">Editar</th>
+
         <th scope="col">Eliminar</th>
         
       </tr>
@@ -36,31 +36,16 @@ include '../funciones/BaseDatos.php';
   <td> <?php echo $varia1[5]?> </td>
 
 
-  <td class="text-center">
-  <button class="btnazul" onclick="eliminarProducto(<?php echo $varia1['ID_PRO']?>)">Editar</button>
-  </td>
+
   <td class="text-center">
   <button class="btnrojo" onclick="eliminarProducto(<?php echo $varia1['ID_PRO']?>)">Eliminar</button>
   </td>
       </tr>
   <?php } ?>
   <td class="text-center">
-  <button class="productosmm">Agregar</button>
+  <button onclick="modalProductos();">Agregar</button>
   </td>
     </tbody>
   </table>
 
-  <div class="modal-con">
-    <div class="modal">
-        <h2>Vendedores</h2>
-        <label for="name">name</label>
-        <input type="text">
 
-        <label for="correo">correo</label>
-        <input type="correo">
-        <button>Guardar</button>
-    </div>
-</div>
-
-
-</div>

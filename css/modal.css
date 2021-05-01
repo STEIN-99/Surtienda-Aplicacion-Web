@@ -1,4 +1,4 @@
-.estilo .modal-con div{
+.modal-con{
     position: fixed;
     width: 100%;
     height: 100vh;
@@ -10,9 +10,10 @@
     align-items: center;
     visibility: hidden;
     opacity: 0;
+    transition: visibility 0s opacity 0.5s;
 }
 
-.estilo .bg-active div{
+.bg-active{
     visibility: visible;
     opacity: 1;
 }
@@ -20,8 +21,8 @@
 .modal{
     position: relative;
     background-color: white;
-    width: 30%;
-    height: 30%;
+    width: 60%;
+    height: 80%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -30,7 +31,7 @@
 
 .modal button{
     padding: 10px 30px;
-    background-color: blue;
+    background-color: #2047f3d5;
     color: white;
     border: none;
     cursor: pointer;

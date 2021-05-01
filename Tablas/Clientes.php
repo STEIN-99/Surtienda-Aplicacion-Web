@@ -16,8 +16,7 @@ include '../funciones/BaseDatos.php';
         <th scope="col">Direccion</th>
         <th scope="col">Telefono</th>
         <th scope="col">Local</th>      
-        
-        <th scope="col">Editar</th>
+
         <th scope="col">Eliminar</th>
         
       </tr>
@@ -44,16 +43,14 @@ include '../funciones/BaseDatos.php';
   <td> <?php echo $varia1[8]?> </td>
 
 
-  <td class="text-center">
-  <button class="btnazul" onclick="eliminarcliente(<?php echo $varia1['ID_CLIENTES']?>)">Editar</button>
-  </td>
+
   <td class="text-center">
   <button class="btnrojo" onclick="eliminarcliente(<?php echo $varia1['ID_CLIENTES']?>)">Eliminar</button>
   </td>
       </tr>
   <?php } ?>
   <td class="text-center">
-  <button>Agregar</button>
+  <button onclick="modalSClientes();">Agregar</button>
   </td>
     </tbody>
   </table>

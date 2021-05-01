@@ -8,7 +8,6 @@ include 'funciones/BaseDatos.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Solo para iconos -->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <!-- //Solo para iconos-->
     <link rel="stylesheet" href="css/catalogo.css">
     <link rel="stylesheet" href="css/Ayuda.css">
@@ -27,9 +26,9 @@ include 'funciones/BaseDatos.php';
     </div>
 
     <ul class="navbar">
-                <li><a class="activo" href="pag/Sucursales.php">Sucursales</a></li>
+                <li><button onclick="mostrarSucursales()">Sucursales</button></li>
                 <li><button onclick="mostrarAyuda()">Ayuda</button></li>
-                <li><a class="activo" href="formularios/Login.html">Inicio de sesión</a></li>
+                <li><a onmouseover="Mostrarinfo()" class="activo" href="formularios/Login.html">Inicio de sesión</a></li>
             </ul>
             
     <div class="navbarh">
@@ -56,7 +55,8 @@ include 'funciones/BaseDatos.php';
 <!-- Banner -->
 <div class="banner-contenedor">
         <div class="banner fade">
-            <img src="img/Slider/slider2.jpg" alt="">
+            <img id="logo" src="img/Slider/slider2.jpg" onmouseover="newimg()"
+            onmouseout="vimg()">
         </div>
 </div>
 
@@ -66,7 +66,7 @@ include 'funciones/BaseDatos.php';
 
 <!-- Categoria de productos -->
 <div class="wrap">
-    <h1>Categorias</h1>
+    <h1  onmouseover="Mostrarcate()" >Categorias</h1>
     <div class="store-wrapper">
     <?php
        $prod="SELECT * FROM marcas";
@@ -75,7 +75,7 @@ include 'funciones/BaseDatos.php';
     ?>
 
     <div class="category_list">
-    <a href="pag/SeleccionProductos.php?ID=<?php echo $varia1[0]?>" class="category_item" ><?php echo $varia1[1]?></a>
+    <a onclick="mostrarProductos(<?php echo $varia1['ID_MARCAS']?>)" class="category_item" ><?php echo $varia1[1]?></a>
     </div>
     <?php } ?>
 </div>
@@ -90,7 +90,7 @@ include 'funciones/BaseDatos.php';
         while($varia1=mysqli_fetch_array($mos)){
         ?>
         <div class="product-item" category="<?php echo $varia1[1]?>">
-        <img height="250px" src="<?php echo ($varia1[4]); ?>"/>
+        <img class="imga" height="250px" src="<?php echo ($varia1[4]); ?>"/>
         <br>
         <button type="button" class="btn "><?php echo $varia1[2]?>
         <br>
@@ -126,13 +126,13 @@ include 'funciones/BaseDatos.php';
                         <a href="Index.php">Inicio</a>
                         <br>
                         <br>
-                        <a href="pag/Sucursales.php">Sucursales</a>
+                        <a  onclick=" mostrarSucursales()">Sucursales</a>
                         <br>
                         <br>
                         <a href="Index.php">Productos</a>
                         <br>
                         <br>
-                        <a href="pag/ayuda.php">Ayuda</a>
+                        <a onclick="mostrarAyuda()">Ayuda</a>
                         <br>
                         <br>
                         <a href="formularios/Login.html">Usuario</a>
@@ -191,7 +191,7 @@ include 'funciones/BaseDatos.php';
 
 
 
-
+<script src="../Ejemplo2/Tabla-ajax.js"></script>
 <script src="js/validarcontactanos.js"></script>
 <script src="js/ContenidoInicio.js"></script>
 <script src="js/ayuda.js"></script>
