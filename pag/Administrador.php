@@ -181,7 +181,13 @@ include '../funciones/BaseDatos.php';
 
 <!-- Inicia Tabla -->
 <div id="Tablas" class="tablas"></div>
+
+
+
 <script src="../JSON/Tabla-ajax.js"></script>
+<script src="../JSON/Tabla-productos.js"></script>
+<script src="../JSON/Tabla-clientes.js"></script>
+<script src="../JSON/Tabla-vendedores.js"></script>
 <script src="../admin-js/InsertProductos.js"></script>
 <script src="../admin-js/InsertSucursal.js"></script>
 <script src="../admin-js/DeleteTables.js"></script>

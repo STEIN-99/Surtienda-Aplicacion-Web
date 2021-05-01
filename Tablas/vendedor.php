@@ -1,8 +1,3 @@
-<?php
-include '../funciones/BaseDatos.php';
- ?>
-
-
 <div class="estilo" id="Vendedores">
 <table>
     <thead class="thead">
@@ -16,35 +11,11 @@ include '../funciones/BaseDatos.php';
         <th scope="col">Direccion</th>
         <th scope="col">Fecha de nacimiento</th>
         
-        <th scope="col">Eliminar</th>
-        
       </tr>
     </thead>
-    <tbody>
-              <?php
-                $sucur= mysqli_query($con,"SELECT * FROM  vendedores");
-
-                while($varia1=mysqli_fetch_array($sucur)){
-                ?>
-  <tr>
-  <td> <?php echo $varia1[0]?> </td>
-  <td> <?php echo $varia1[1]?> </td>
-  <td> <?php echo $varia1[2]?> </td>
-  <td> <?php echo $varia1[3]?> </td>
-  <td> <?php echo $varia1[4]?> </td>
-  <td> <?php echo $varia1[5]?> </td>
-  <td> <?php echo $varia1[6]?> </td>
-  <td> <?php echo $varia1[7]?> </td>
-
-
-
+    <tbody id="respuesta">
   <td class="text-center">
-  <button class="btnrojo" onclick="eliminarvendedor(<?php echo $varia1['ID_VENDEDOR']?>)">Eliminar</button>
-  </td>
-      </tr>
-  <?php } ?>
-  <td class="text-center">
-  <button onclick="modalVendedores();">Agregar</button>
+  <button onclick="mosVendedores();">Mostrar vendedor</button>
   </td>
     </tbody>
   </table>

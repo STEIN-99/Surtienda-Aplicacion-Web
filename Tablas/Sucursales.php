@@ -1,14 +1,10 @@
-<?php
-include '../funciones/BaseDatos.php';
- ?>
-
 <div class="estilo" id="Clientes">
 <table>
     <thead class="thead">
     <tr>
-        <th scope="col">Id del cliente</th>
-        <th scope="col">Usuario</th>
-        <th scope="col">Contraseña</th>
+        <th scope="col">Id de sucursal</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Ubicacion</th>
     </tr>
     </thead>
     <tbody id="respuesta">
