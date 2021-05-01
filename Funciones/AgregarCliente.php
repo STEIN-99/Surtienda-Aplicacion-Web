@@ -1,5 +1,5 @@
 <?php
-include '../BaseDatos.php';
+include 'BaseDatos.php';
 
 
 $cliente=$_POST['cliente'];
@@ -20,10 +20,10 @@ echo $a=mysqli_query($con,$sqq);
 $sql="INSERT INTO clientes  VALUES (null, '$municipioc','$coloniac',LAST_INSERT_ID(),'$cliente','$paterno','$materno','$direcc','$tel','$nlocal')";
 echo $E=mysqli_query($con,$sql);
 
-  header("location: ../Inicio.php");
+  header("location: ../formularios/Login.html");
 
 
 mysqli_close($con);
 
 
- ?>
+?>

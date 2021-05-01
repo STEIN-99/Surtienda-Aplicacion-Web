@@ -3,19 +3,18 @@ include '../funciones/BaseDatos.php';
  ?>
 
 
-<div class="estilo" id="Clientes">
+<div class="estilo" id="Vendedores">
 <table>
     <thead class="thead">
       <tr>
-        <th scope="col">Id del cliente</th>
-        <th scope="col">Usuario</th>
-        <th scope="col">Contraseña</th>
+        <th scope="col">Id del vendedor</th>
+        <th scope="col">Rfc</th>
         <th scope="col">Nombre</th>
         <th scope="col">Apellido paterno</th>
         <th scope="col">Apellido materno</th>
-        <th scope="col">Direccion</th>
         <th scope="col">Telefono</th>
-        <th scope="col">Local</th>      
+        <th scope="col">Direccion</th>
+        <th scope="col">Fecha de nacimiento</th>
         
         <th scope="col">Editar</th>
         <th scope="col">Eliminar</th>
@@ -24,11 +23,7 @@ include '../funciones/BaseDatos.php';
     </thead>
     <tbody>
               <?php
-                $sucur= mysqli_query($con,"SELECT c.ID_CLIENTES, u.CORREO_ELEC, u.CONTRASENA, c.NOMBRE, c.APELLIDO_PAT, c.APELLIDO_MAT, c.DIRECCION, c.TELEFONO, c.NOM_LOCAL
-                                            FROM clientes AS c, usuarios AS u
-                                            WHERE c.ID_USUA=u.ID_USUA
-                
-                ");
+                $sucur= mysqli_query($con,"SELECT * FROM  vendedores");
 
                 while($varia1=mysqli_fetch_array($sucur)){
                 ?>
@@ -41,21 +36,19 @@ include '../funciones/BaseDatos.php';
   <td> <?php echo $varia1[5]?> </td>
   <td> <?php echo $varia1[6]?> </td>
   <td> <?php echo $varia1[7]?> </td>
-  <td> <?php echo $varia1[8]?> </td>
 
 
   <td class="text-center">
-  <button class="btnazul" onclick="eliminarcliente(<?php echo $varia1['ID_CLIENTES']?>)">Editar</button>
+  <button class="btnazul" onclick="eliminarvendedor(<?php echo $varia1['ID_VENDEDOR']?>)">Editar</button>
   </td>
   <td class="text-center">
-  <button class="btnrojo" onclick="eliminarcliente(<?php echo $varia1['ID_CLIENTES']?>)">Eliminar</button>
+  <button class="btnrojo" onclick="eliminarvendedor(<?php echo $varia1['ID_VENDEDOR']?>)">Eliminar</button>
   </td>
       </tr>
   <?php } ?>
   <td class="text-center">
-  <button>Agregar</button>
+  <button href="../Funciones/FAProducto.php?ID=<?php echo $varia1[6]?>">Agregar</button>
   </td>
     </tbody>
   </table>
-
 </div>

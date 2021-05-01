@@ -3,10 +3,10 @@
 include 'BaseDatos.php';
 
 
-$idv=$_GET['ID_VENDEDOR'];
+$idv=$_GET['ID_CLIENTES'];
 
 
-$sql="DELETE FROM vendedores  WHERE ID_VENDEDOR = $idv ";
+$sql="DELETE FROM clientes WHERE ID_CLIENTES = $idv ";
 echo $E=mysqli_query($con,$sql);
 
 if ($sql) {
